@@ -24,7 +24,9 @@ gem 'therubyracer'
 # http://stackoverflow.com/questions/9004758/rails-could-not-find-generator-rspecinstall
 group :development, :test do
       gem "rspec-rails"
+      gem "spork"
     end
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

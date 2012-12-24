@@ -16,4 +16,13 @@ describe PagesController do
     end
   end
 
+  # Ici on ajoute methode pour tester une ...erreur
+  # car ... pas de pages ni de methode dans le controller de ce type
+  describe "GET 'apropos'" do
+    it "devrait reussir" do
+      get 'apropos'
+      response.should be_success
+    end
+  end
+
 end
