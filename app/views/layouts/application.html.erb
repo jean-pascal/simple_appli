@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SimpleAppli</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
- <title>Une Simple Application de test via Ruby on Rails | <%= @titre %></title>
+ <!-- <title>Une Simple Application de test via Ruby on Rails | < % = @titre %></title> -->
+ <title> <%= titre %></title>
   <%= csrf_meta_tags %>
+ <%= render 'layouts/stylesheets' %>
 </head>
 <body>
 
-<%= yield %>
+<!-- Ici on ajoute configuration pour en tete de la page -->
+<div class="container">
 
+<%= render 'layouts/entete' %>
+	 <section class="round">
+		<%= yield %>
+	</section>
+<!-- Ici on ajoute configuration pour un bout de pied de page -->
+ <%= render 'layouts/pieddepage' %>
+
+</div>
 </body>
 </html>
