@@ -1,6 +1,8 @@
 SimpleAppli::Application.routes.draw do
 
 
+  get "users/new"
+
   root :to => 'pages#home'
 
 #  get "pages/home"
@@ -9,9 +11,10 @@ SimpleAppli::Application.routes.draw do
 #  get "pages/aide"
 
 
-match '/contact', :to => 'pages#contact'
+  match '/contact', :to => 'pages#contact'
   match '/apropos',   :to => 'pages#apropos'
   match '/aide',    :to => 'pages#aide'
+  match '/signup',  :to => 'users#new'
 
 
   # The priority is based upon order of creation:
