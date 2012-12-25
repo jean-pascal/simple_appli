@@ -1,7 +1,9 @@
 SimpleAppli::Application.routes.draw do
 
+  # Ici on ajoute un "pack" de routes, ressources pour table users
+  resources :users
 
-  get "users/new"
+  # get "users/new" # ici on definit juste route pour get "/users/new"
 
   root :to => 'pages#home'
 

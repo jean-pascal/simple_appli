@@ -21,10 +21,14 @@ gem 'jquery-rails'
 gem 'execjs'
 gem 'therubyracer'
 
-# http://stackoverflow.com/questions/9004758/rails-could-not-find-generator-rspecinstall
 group :development, :test do
+      # http://stackoverflow.com/questions/9004758/rails-could-not-find-generator-rspecinstall
+      # Ici on ajoute plugin pour integrer tests fonctionnels
       gem "rspec-rails"
+      # Ici on ajoute plugin pour accelerer l'appel aux tests fonctionnels
       gem "spork"
+      # Ici on ajoute plugin pour annoter les models (nom des colonnes des tables)
+      gem 'annotate'
     end
 
 
